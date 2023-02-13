@@ -10,7 +10,7 @@ That's right!!  You can solve these challenges in any computer language you want
 * create-react-app
 * sinatra
 * tailwind
-* made skillz run rampid
+* mad-skillz run-rampid
 * 1.21 gigawatts
 
 ### Looking for API information?
