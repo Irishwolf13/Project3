@@ -1,9 +1,15 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <h1 className='border- border-slate-900'>testing</h1>
+      <Routes>
+        <Route path="/"/>
+        <Route path="/user"/>
+        <Route path="/problem"/>
+      </Routes>
     </div>
   );
 }
