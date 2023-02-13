@@ -39,8 +39,8 @@ puts "Seeding Solutions"
     Solution.create(
       solve: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
       num_of_likes: rand(1..250),
-      language: "C++"
-      user_id: User.all.sample.id
+      language: "C++",
+      user_id: User.all.sample.id,
       problem_id: Problem.all.sample.id
     )
   end
@@ -48,8 +48,8 @@ puts "Seeding Solutions"
     Solution.create(
       solve: Faker::Lorem.paragraph(sentence_count: 3, supplemental: false, random_sentences_to_add: 6),
       num_of_likes: rand(1..250),
-      language: "C#"
-      user_id: User.all.sample.id
+      language: "C#",
+      user_id: User.all.sample.id,
       problem_id: Problem.all.sample.id
     )
   end
@@ -57,8 +57,8 @@ puts "Seeding Solutions"
     Solution.create(
       solve: Faker::Lorem.paragraph(sentence_count: 3, supplemental: false, random_sentences_to_add: 4),
       num_of_likes: rand(1..250),
-      language: "Ruby"
-      user_id: User.all.sample.id
+      language: "Ruby",
+      user_id: User.all.sample.id,
       problem_id: Problem.all.sample.id
     )
   end
@@ -66,16 +66,16 @@ puts "Seeding Solutions"
     Solution.create(
       solve: Faker::Lorem.paragraph(sentence_count: 6, supplemental: false, random_sentences_to_add: 4),
       num_of_likes: rand(1..250),
-      language: "Javascript"
-      user_id: User.all.sample.id
+      language: "Javascript",
+      user_id: User.all.sample.id,
       problem_id: Problem.all.sample.id
     )
   end
 puts "Seeding Comments"
   1000.times do
     Comment.create(
-      comment: Faker::Movies::BackToTheFuture.quote
-      solution_id: Solution.all.sample.id
+      comment: Faker::Movies::BackToTheFuture.quote,
+      solution_id: Solution.all.sample.id,
       user_id: User.all.sample.id
     )
   end
