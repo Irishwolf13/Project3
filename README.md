@@ -3,13 +3,12 @@
 Looking for help upping your coding skills?  Want to help others up their coding skills??  Here you can do both!  Here we give you a small coding exercies once a day.  We give you bite sized, but very importaint coding questions each day.  Learning to solve these questions will help you break through those scary whiteboard intervies you've heard so much about! Share your solutions, or study others, OR BOTH!!
 
 ### Solve in any computer language!
-That's right!!  You can solve these challenges in any computer language you want!  
+That's right!!  You can solve these challenges in any computer language you want!  Solve in one, or many for extra practice!
 * C#, certainly! 
 * C++, it all adds up! 
 * Ruby, such a gem!  
 * Python, ssssssounds good!  
 * Javascript, with or without creamer!  
-Solve in one, or many for extra practice!
 
 ### We used some stuff to make this...
 * ruby / javascript / sql / css
