@@ -6,12 +6,12 @@ Looking for help upping your coding skills?  Want to help others up their coding
 That's right!!  You can solve these challenges in any computer language you want!  C#, certainly! C++, it all adds up! Ruby, such a gem!  Python, ssssssounds good!  Javascript, with or without creamer!  Solve in one, or many for extra practice!
 
 ### We used some stuff to make this...
-ruby/javascript/sql/css
-create-react-app
-sinatra
-tailwind
-made skillz run rampid
-1.21 gigawatts
+* ruby / javascript / sql / css
+* create-react-app
+* sinatra
+* tailwind
+* made skillz run rampid
+* 1.21 gigawatts
 
 ### Looking for API information?
 ![endpoints](https://user-images.githubusercontent.com/73799185/218355942-89fec264-1fee-4db7-966e-e45687a50d1d.png)
