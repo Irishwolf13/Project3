@@ -1,6 +1,6 @@
 # Tatiana's Daily Code Challenge!
 
-Looking for help upping your coding skills?  Want to help others up their coding skills??  Here you can do both!  Here we give you a small coding exercies once a day.  We give you bite sized, but very importaint coding questions each day.  Learning to solve these questions will help you break through those scary whiteboard intervies you've heard so much about! Share your solutions, or study others, OR BOTH!!
+Looking for help upping your coding skills?  Want to help others up their coding skills??  Here you can do both!  Here we give you a small coding exercises once a day.  We give you bite sized, but very important coding questions each day.  Learning to solve these questions will help you break through those scary whiteboard interviews you've heard so much about! Share your solutions, or study others, OR BOTH!!
 
 ### Solve in any computer language!
 That's right!!  You can solve these challenges in any computer language you want!  Solve in one, or many for extra practice!
