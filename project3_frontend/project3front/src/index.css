@@ -7,8 +7,25 @@
     src: url("./fonts/w95fa.woff");
 }
 
+@font-face {
+    font-family: "WIN95-BOLD";
+    src: url("./fonts/w95fa-bold.woff");
+}
+
 #body {
     background-image: url("./assets/tiled.png");
     background-position: center;
     background-size: cover;
+}
+
+.navbar-outer {
+    @apply absolute inline-flex justify-center z-0 h-[45.6rem] w-1/6 bg-[#c0c7c8] border-r-black border-b-black border-l-white border-t-white border-solid border-2
+}
+
+.navbar-inner {
+    @apply relative inline-block top-8 w-[98%] h-[92%] border-t-black border-l-black border-solid border-2 bg-white font-win95
+}
+
+.navbar-button {
+    @apply hover:bg-gray-300 active:border-dashed active:border-2 active:border-black w-full p-1
 }

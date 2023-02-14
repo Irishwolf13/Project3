@@ -2,6 +2,11 @@ import React, {useState} from "react"
 import Login from "./Login"
 // import User from "./User"
  import SearchMenu from "./SearchMenu"
+ import search_icon from "../assets/search-icon.png"
+ import folder_icon from "../assets/folder-icon.png"
+ import answer_icon from "../assets/answer-icon.png"
+ import login_icon from "../assets/login-icon.png"
+ import user_icon from "../assets/user-icon.png"
 
 
 function NavigationBar(){
@@ -15,26 +20,55 @@ function NavigationBar(){
     function handleSearchToggle(){
         setSearchToggle(!searchToggle)
     }
-    let user = "user placeholder"
+
+    let user = "Guest"
+
     return (
     <>
-      <div className="absolute inline-block z-0 h-[45.6rem] w-1/6 bg-slate-300 border-r-2 border-solid border-black">
-        <h1>navbar</h1>
-      </div>
-      <div className="nav-bar">
-        <div> {user} / <button onClick={handleLoggingIn}>{loggingIn ? "logout" : "login"}</button></div>
-        {loggingIn ? <Login/> : null}
+        {/* This is the outer portion of the navbar, any tailwind for this specific element is in index.css */}
+        <div className="navbar-outer">
 
-        <div id="solves">
-          <button>Solves</button>
-        </div>
+            {/* This is the blue bar with words in it on the actual navbar element */}
+            <div className="absolute inline-block bg-[#0000a8] w-[98%] h-7 top-0.5">
+                <img src={folder_icon} alt="navbar icon" className="inline-block px-1 h-5"/>
+                <h1 className="inline-block font-win95bold text-white top-2 pl-1">Navbar</h1>
+            </div>
 
-        <div id="search">
-          <button onClick={handleSearchToggle}>Search</button>
-          {searchToggle ? <SearchMenu/> : null}
+            {/* This is the inner portion of the navar, all tailwind for it is stored in index.css */}
+            <div className="navbar-inner">
+
+                {/* This is the user info section */}
+                <div className="p-2 h-1/6 bg-cyan-300">
+                    <img src={user_icon} alt="user icon" className="inline-block h-6 float-left"/>
+                    <p className="float-left pl-2">
+                        {user}
+                    </p>
+                </div>
+
+                {/* This is the login / logout button */}
+                <button onClick={handleLoggingIn} className="navbar-button">
+                    <img src={login_icon} alt="login icon" className="inline-block h-6 float-left"/>
+                    <p className="float-left pl-2">
+                        {loggingIn ? "Log Out" : "Log In"}
+                    </p>
+                </button>
+                    {loggingIn ? <Login /> : null}
+
+                {/* This is the button for solves */}
+                <button className="navbar-button">
+                    <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
+                    <p className="float-left pl-2">Solves</p>
+                </button>
+
+                {/* This is the button for the search menu */}
+                <button onClick={handleSearchToggle} className="navbar-button">
+                    <img src={search_icon} alt="search icon" className="inline-block h-6 float-left"/>
+                    <p className="float-left pl-2">Search</p>
+                </button>
+                {searchToggle ? <SearchMenu /> : null}
+            </div>
         </div>
-      </div>
-     </>   
+    </>   
     )
 }
 
