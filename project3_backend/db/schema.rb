@@ -12,19 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2023_02_13_185308) do
 
-  create_table "Comments", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.string "comment"
     t.integer "solution_id"
     t.integer "user_id"
   end
 
-  create_table "Problems", force: :cascade do |t|
+  create_table "problems", force: :cascade do |t|
     t.string "question"
     t.string "difficulty"
     t.datetime "date"
   end
 
-  create_table "Solutions", force: :cascade do |t|
+  create_table "solutions", force: :cascade do |t|
     t.string "solve"
     t.integer "num_of_likes"
     t.string "language"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2023_02_13_185308) do
     t.integer "problem_id"
   end
 
-  create_table "Users", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.string "password"
   end
