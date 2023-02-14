@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "WIN95";
+    src: url("./fonts/w95fa.woff");
+}
+
+#body {
+    background-image: url("./assets/tiled.png");
+    background-position: center;
+    background-size: cover;
+}

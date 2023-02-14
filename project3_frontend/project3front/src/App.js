@@ -1,19 +1,23 @@
 import './App.css';
-// import React, { useState, useEffect } from 'react';
-import React from 'react';
-//import { Routes, Route } from "react-router-dom"
-import NavigationBar from "./components/NavigationBar"
+
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, NavigationType } from "react-router-dom"
+import NavigationBar from './components/NavigationBar';
+import TitleBar from './components/TitleBar';
+import MainSpace from './components/MainSpace';
 
 function App() {
 
   return (
-    <div className="App">
-     <NavigationBar /> 
+    <div className='h-full'>
       {/* <Routes>
         <Route path="/"/>
         <Route path="/user"/>
         <Route path="/problem"/>
-      </Routes> */}
+        </Routes> */}
+        <TitleBar/>
+        <NavigationBar/>
+        <MainSpace/>
     </div>
   );
 }
