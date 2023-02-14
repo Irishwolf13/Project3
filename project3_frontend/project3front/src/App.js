@@ -7,17 +7,15 @@ import MainSpace from './components/MainSpace';
 
 function App() {
   return (
-    <div>
+    <div className='h-full'>
       {/* <Routes>
         <Route path="/"/>
         <Route path="/user"/>
         <Route path="/problem"/>
         </Routes> */}
-      <div>
         <TitleBar/>
         <NavigationBar/>
         <MainSpace/>
-      </div>
     </div>
   );
 }
