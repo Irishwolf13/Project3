@@ -1,6 +1,6 @@
 class CreateSolution < ActiveRecord::Migration[6.1]
   def change
-    create_table :Solutions do |t|
+    create_table :solutions do |t|
       t.string :solve
       t.integer :num_of_likes
       t.string :language
