@@ -9,7 +9,7 @@ import MainSpace from './components/MainSpace';
 function App() {
 
   return (
-    <div className='h-full'>
+    <div className='h-screen'>
       {/* <Routes>
         <Route path="/"/>
         <Route path="/user"/>

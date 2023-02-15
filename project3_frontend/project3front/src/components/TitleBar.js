@@ -1,9 +1,13 @@
 import React from "react"
+import windows_logo from "../assets/windows-logo.png"
 
 function TitleBar() {
     return (
-        <div className="z-10 sticky top-0 bg-slate-300 w-full text-center">
-            <h1 className="border-b-2 border-solid border-black p-4 text-2xl text-black font-serif">Tatiana's Daily Code Challenge</h1>
+        <div className="top-0 bg-[#c0c7c8] h-12 border-solid border-b-black border-b-2 shadow-inner">
+            <button className="start-button">
+                <img src={windows_logo} alt="windows logo" className="inline-block h-8 pl-1 float-left"/>
+                <p className="inline-block font-win95bold text-lg">Start</p>
+            </button>
         </div>
     )
 }
