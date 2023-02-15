@@ -29,10 +29,14 @@ function MainSpace() {
       />
     )
 
+    const helperRefresh = (newItem) => {
+      setSolutions([...solutions, newItem])
+    }
+
     return(
         <div className="mx-auto w-4/6 mt-6">
             <ProblemCard />
-            <SubmitSolve problem={ problem }/>
+            <SubmitSolve problem={ problem } helperRefresh={helperRefresh}/>
             {displaySolutions}
             <CommentCard/>
         </div>

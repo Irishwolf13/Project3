@@ -42,14 +42,14 @@ class ApplicationController < Sinatra::Base
     User.create(user_name: params[:name], password: params[:password]).to_json
   end
 
-  post "/users/:id/solutions" do
+  post "/solutions" do
     Solution.create(
       user_id: params[:user_id],
       problem_id: params[:problem_id],
       language: params[:language],
       num_of_likes: params[:num_of_likes],
       solve: params[:solve]
-    ).to_json
+    ).to_json(include: :comments)
   end
 
   post "/comments" do
