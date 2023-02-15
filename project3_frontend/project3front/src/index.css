@@ -43,5 +43,5 @@
 
 .start-button {
     @apply relative border-solid border-b-black border-r-black border-l-white border-t-white border-2 
-    m-1 h-[88%] w-24 hover:bg-gray-300
+    m-1 h-[84%] w-24 hover:bg-gray-300 active:border-t-black active:border-l-black active:border-r-white active:border-b-white
 }
