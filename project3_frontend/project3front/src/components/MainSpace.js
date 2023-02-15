@@ -15,15 +15,20 @@ function MainSpace() {
       setSolutions(problemData.solutions)
   })
   }, [])
-  let displaySolutions = solutions.map(solution => 
+  
+  let sortSolutions = solutions.sort((a, b) => b.num_of_likes - a.num_of_likes)
+  let displaySolutions = sortSolutions.map(solution => 
       <SolutionCard 
         key={solution.id}
+        id={solution.id}
         likes={solution.num_of_likes}
         solve={solution.solve}
         language={solution.language}
         comments={solution.comments}
+        problem={problem}
       />
     )
+
     return(
         <div className="mx-auto w-4/6 mt-6">
             <ProblemCard />
