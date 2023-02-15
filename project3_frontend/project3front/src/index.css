@@ -19,7 +19,7 @@
 }
 
 .navbar-outer {
-    @apply absolute inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px]
+    @apply absolute inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
     border-r-black border-b-black border-l-white border-t-white border-solid border-2
 }
 
@@ -33,7 +33,7 @@
 
 .search-outer {
     @apply absolute flex justify-center h-36 w-full bg-[#c0c7c8] border-b-black border-r-black 
-    border-t-gray-300 border-l-gray-300 border-solid border-2 shadow-2xl
+    border-t-white border-l-white border-solid border-2 shadow-2xl
 }
 
 .search-inner {
@@ -42,5 +42,21 @@
 
 .start-button {
     @apply relative border-solid border-b-black border-r-black border-l-white border-t-white border-2 
-    m-1 h-[84%] w-24 hover:bg-gray-300 active:border-t-black active:border-l-black active:border-r-white active:border-b-white
+    m-1 h-[84%] w-24 hover:bg-gray-300 active:border-t-black active:border-l-black active:border-r-white 
+    active:border-b-white
+}
+
+.solution-card-outer {
+    @apply flex justify-center relative h-fit bg-[#c0c7c8] border-2 border-solid border-b-black border-r-black 
+    border-t-white border-l-white w-5/6 mx-auto
+}
+
+.solution-card-inner {
+    @apply relative border-2 border-solid border-t-black border-l-black bg-white w-[99%] bottom-1 mt-11 p-1
+}
+
+.custom-button {
+    @apply relative border-solid border-b-black border-r-black border-t-white border-l-white border-2 bg-[#c0c7c8] 
+    hover:bg-gray-300 active:bg-gray-300 active:border-t-black active:border-l-black active:border-r-white 
+    active:border-b-white h-6 w-6 
 }

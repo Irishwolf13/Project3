@@ -38,7 +38,6 @@ function MainSpace() {
             <ProblemCard />
             <SubmitSolve problem={ problem } helperRefresh={helperRefresh}/>
             {displaySolutions}
-            <CommentCard/>
         </div>
     )
 }
