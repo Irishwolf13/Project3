@@ -1,11 +1,12 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import ProblemCard from "./ProblemCard"
 import CommentCard from "./CommentCard"
 
 function MainSpace() {
+
     return(
         <div className="mx-auto w-4/6 mt-6">
-            <ProblemCard/>
+            <ProblemCard />
             <CommentCard/>
         </div>
     )
