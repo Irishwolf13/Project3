@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react"
 import CommentCard from "./CommentCard"
 
 function SolutionCard({ id, likes, solve, language, comments, problem }) {
-    const [solution, setSolution] = useState({})
     const [myLikes, setLikes]= useState(likes)
 
     let displayComments = comments.map(item =>

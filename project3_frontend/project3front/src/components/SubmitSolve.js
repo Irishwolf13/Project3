@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-function SubmitSolve( { problem }){
+function SubmitSolve( { problem, helperRefresh }){
 
   const [solveInput, setSolveInput] = useState("")
 
@@ -10,9 +10,23 @@ function SubmitSolve( { problem }){
   const handleSubmit = (e) => {
     e.preventDefault()
     let currentLanguage = e.target.form.languages.value
+    fetch(`http://localhost:9292/solutions`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        user_id: 1,
+        problem_id: problem.id,
+        language: currentLanguage,
+        num_of_likes: 0,
+        solve: solveInput
+      })
+    })
+    .then(res => res.json())
+    .then(res => helperRefresh(res))
   }
 
  return (
+
+
   <div className="border-2 border-solid border-black mx-auto w-4/6 bg-slate-300 m-6 h-48">
     <div>
         <form>
