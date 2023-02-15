@@ -29,7 +29,6 @@ function MainSpace() {
             <ProblemCard />
             <SubmitSolve/>
             {displaySolutions}
-            <CommentCard/>
         </div>
     )
 }

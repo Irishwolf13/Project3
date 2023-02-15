@@ -52,7 +52,7 @@
 }
 
 .solution-card-inner {
-    @apply relative border-2 border-solid border-t-black border-l-black bg-white w-[99%] bottom-1 mt-10 p-1
+    @apply relative border-2 border-solid border-t-black border-l-black bg-white w-[99%] bottom-1 mt-11 p-1
 }
 
 .custom-button {
