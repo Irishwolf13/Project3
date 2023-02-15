@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     # myProblem.to_json
     # myProblem.to_json(include: :solutions)
     # myProblem.to_json(include: {solutions: {include: {user:{only: [:user_name]}}}})
-    myProblem.to_json(include: {solutions: {include: :user}})
+    myProblem.to_json(include: {solutions: {include: :comments}})
   end
 
   get "/problems/:id/solutions" do
