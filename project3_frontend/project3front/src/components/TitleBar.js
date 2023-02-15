@@ -11,7 +11,7 @@ function TitleBar({handleNavbarToggle}) {
                 {/* This is the start button tailwind/code. The text and image are wrapped in a div to do some sneaky
                 movement using a portion of a border, just makes it look a little more interesting when you click it. */}
                 <button className="start-button" onClick={handleNavbarToggle}>
-                    <div className="active:border-t-solid active:border-gray-300 active:border-t-2">
+                    <div className="relative active:top-0.5">
                         <img src={windows_logo} alt="windows logo" className="inline-block relative top-0.5 h-8 pl-1 float-left"/>
                         <p className="inline-block font-win95bold text-lg">Start</p>
                     </div>
