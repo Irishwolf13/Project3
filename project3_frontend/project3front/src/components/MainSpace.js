@@ -6,19 +6,29 @@ import SubmitSolve from './SubmitSolve';
 
 function MainSpace() {
   const [problem, setProblem] = useState({})
+  const [solutions, setSolutions] = useState([])
   useEffect(() => {
     fetch("http://localhost:9292/problems/1")
     .then(res => res.json())
     .then(problemData => {
       setProblem(problemData)
+      setSolutions(problemData.solutions)
   })
   }, [])
-  console.log(problem)
+  let displaySolutions = solutions.map(solution => 
+      <SolutionCard 
+        key={solution.id}
+        likes={solution.num_of_likes}
+        solve={solution.solve}
+        language={solution.language}
+        comments={solution.comments}
+      />
+    )
     return(
         <div className="mx-auto w-4/6 mt-6">
             <ProblemCard />
             <SubmitSolve/>
-            <SolutionCard/>
+            {displaySolutions}
             <CommentCard/>
         </div>
     )
