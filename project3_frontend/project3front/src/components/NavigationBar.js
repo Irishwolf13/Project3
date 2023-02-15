@@ -28,22 +28,28 @@ function NavigationBar(){
         {/* This is the outer portion of the navbar, any tailwind for this specific element is in index.css */}
         <div className="navbar-outer">
 
-            {/* This is the blue bar with words in it on the actual navbar element */}
+            {/* This is the blue bar with words in it on the actual navbar element
             <div className="absolute inline-block bg-[#0000a8] w-[98%] h-7 top-0.5">
                 <img src={folder_icon} alt="navbar icon" className="inline-block px-1 h-5"/>
                 <h1 className="inline-block font-win95bold text-white top-2 pl-1">Navbar</h1>
+            </div> */}
+
+            <div className="inline-block relative top-0 w-10 bg-[#808080] p-1" style={{writingMode: 'vertical-lr'}}>
+                <p className="relative inline-block float-right transform rotate-180 font-bold text-[#c0c7c8] text-xl">(Not)Windows 
+                    <p className="relative inline-block text-white text-xl top-1 font-normal">95</p>
+                </p>
             </div>
 
             {/* This is the inner portion of the navar, all tailwind for it is stored in index.css */}
             <div className="navbar-inner">
 
-                {/* This is the user info section */}
+                {/* This is the user info section
                 <div className="p-2 h-1/6 bg-cyan-300">
                     <img src={user_icon} alt="user icon" className="inline-block h-6 float-left"/>
                     <p className="float-left pl-2">
                         {user}
                     </p>
-                </div>
+                </div> */}
 
                 {/* This is the login / logout button */}
                 <button onClick={handleLoggingIn} className="navbar-button">
