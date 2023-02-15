@@ -6,6 +6,11 @@ import NavigationBar from './components/NavigationBar';
 import TitleBar from './components/TitleBar';
 import MainSpace from './components/MainSpace';
 function App() {
+  const [navbarToggle, setNavbarToggle] = useState(false)
+
+  function handleNavbarToggle() {
+    setNavbarToggle(!navbarToggle)
+  } 
 
   return (
     <div className='h-screen'>
@@ -14,8 +19,8 @@ function App() {
         <Route path="/user"/>
         <Route path="/problem"/>
         </Routes> */}
-        <TitleBar/>
-        <NavigationBar/>
+        <TitleBar handleNavbarToggle={handleNavbarToggle}/>
+        {navbarToggle ? <NavigationBar/> : null}
         <MainSpace/>
     </div>
   );

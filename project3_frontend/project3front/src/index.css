@@ -19,17 +19,16 @@
 }
 
 .navbar-outer {
-    @apply absolute inline-flex justify-center z-0 h-[90%] w-1/6 bg-[#c0c7c8] 
+    @apply absolute inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px]
     border-r-black border-b-black border-l-white border-t-white border-solid border-2
 }
 
 .navbar-inner {
-    @apply relative inline-block top-8 w-[98%] h-[92%] border-t-black border-l-black border-solid 
-    border-2 bg-white font-win95
+    @apply relative inline-block w-[98%] h-[99%] font-win95
 }
 
 .navbar-button {
-    @apply hover:bg-gray-300 active:border-dashed active:border-2 active:border-black w-full p-1
+    @apply relative hover:bg-[#0000a8] hover:text-white active:bg-gray-200 active:text-black w-full p-1
 }
 
 .search-outer {
