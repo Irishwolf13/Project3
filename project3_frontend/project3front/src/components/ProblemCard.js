@@ -1,6 +1,4 @@
-import React, {useState, useEffect} from "react"
-
-function ProblemCard({onLangChange}) {
+function ProblemCard({onLangChange, problem}) {
 
     return (
         <div className="mx-auto bg-slate-300 w-5/6 h-96 border-2 border-solid border-black">
@@ -17,8 +15,8 @@ function ProblemCard({onLangChange}) {
                 </select>
             </div>
             <div className="problem-card">
-                <p> <strong>Difficulty:</strong> TBD</p>
-            <h4 className="question">Going to be the Question</h4>
+                <p> <strong>Difficulty: </strong>{problem.difficulty}</p>
+            <h4 className="question">{problem.question}</h4>
             </div>
         </div>
 
