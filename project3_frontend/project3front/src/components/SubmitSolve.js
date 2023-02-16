@@ -21,6 +21,8 @@ function SubmitSolve( { problem, helperRefresh }){
     })
     .then(res => res.json())
     .then(res => helperRefresh(res))
+
+    setSolveInput("")
   }
 
  return (
