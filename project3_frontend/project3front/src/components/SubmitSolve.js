@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
 function SubmitSolve( { problem, helperRefresh }){
-
   const [solveInput, setSolveInput] = useState("")
 
   const handleInput = (e) => {
@@ -53,6 +52,5 @@ function SubmitSolve( { problem, helperRefresh }){
   </div>
  )
 }
-
 
 export default SubmitSolve

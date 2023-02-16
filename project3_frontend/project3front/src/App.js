@@ -10,18 +10,16 @@ function App() {
 
   function handleNavbarToggle() {
     setNavbarToggle(!navbarToggle)
-  } 
+  }
 
   return (
     <div className='h-screen'>
-      {/* <Routes>
-        <Route path="/"/>
-        <Route path="/user"/>
-        <Route path="/problem"/>
-        </Routes> */}
-        <TitleBar handleNavbarToggle={handleNavbarToggle}/>
-        {navbarToggle ? <NavigationBar/> : null}
-        <MainSpace/>
+      <TitleBar handleNavbarToggle={handleNavbarToggle}/>
+      {navbarToggle ? <NavigationBar/> : null}
+      <Routes>
+        <Route path="/" element={<MainSpace/>}/>
+        <Route path="/soutions" element={<h1>Put Solutions here</h1>}/>
+      </Routes>
     </div>
   );
 }
