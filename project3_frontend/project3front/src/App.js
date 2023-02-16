@@ -8,15 +8,26 @@ import MainSpace from './components/MainSpace';
 import SearchMenu from './components/SearchMenu';
 function App() {
   const [navbarToggle, setNavbarToggle] = useState(false)
-
+  const [logStatus, setLogStatus] = useState("Log In")
+  const [currentUser, setCurrentUser] = useState({})
+  console.log(currentUser)
   function handleNavbarToggle() {
     setNavbarToggle(!navbarToggle)
+  }
+  function helperLogStatus(status){
+    setLogStatus(status)
+    setCurrentUser({})
+  }
+
+  function helperLoggingIn(currentUser){
+    setLogStatus(`Log out: ${currentUser.user_name}`)
+    setCurrentUser(currentUser)
   }
 
   return (
     <div className='h-screen'>
       <TitleBar handleNavbarToggle={handleNavbarToggle}/>
-      {navbarToggle ? <NavigationBar/> : null}
+      {navbarToggle ? <NavigationBar logStatus={logStatus} helperLoggingIn={helperLoggingIn} helperLogStatus={helperLogStatus}/> : null}
       <Routes>
         <Route path="/" element={<MainSpace/>}/>
         <Route path="/solutions" element={<h1>Put Solutions here</h1>}/>
