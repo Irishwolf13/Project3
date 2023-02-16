@@ -74,11 +74,10 @@ function NavigationBar(){
                 </NavLink>
 
                 {/* This is the button for the search menu */}
-                <button onClick={handleSearchToggle} className="navbar-button">
+                <NavLink to="/search" className="navbar-button">
                     <img src={search_icon} alt="search icon" className="inline-block h-6 float-left"/>
                     <p className="float-left pl-2">Search</p>
-                    <p className="float-right pl-1 font-win95bold align-middle">{searchToggle ? 'v' : '>' }</p>
-                </button>
+                </NavLink>
                 {searchToggle ? <SearchMenu /> : null}
             </div>
         </div>

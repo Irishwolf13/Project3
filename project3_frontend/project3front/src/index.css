@@ -28,16 +28,7 @@
 }
 
 .navbar-button {
-    @apply relative hover:bg-[#0000a8] hover:text-white active:bg-gray-200 active:text-black w-full p-1
-}
-
-.search-outer {
-    @apply absolute flex justify-center h-36 w-full bg-[#c0c7c8] border-b-black border-r-black 
-    border-t-white border-l-white border-solid border-2 shadow-2xl
-}
-
-.search-inner {
-    @apply relative top-8 w-[98%] h-[76%] border-t-black border-l-black border-solid border-2 bg-white p-2
+    @apply relative inline-block hover:bg-[#0000a8] hover:text-white active:bg-gray-200 active:text-black w-full p-1
 }
 
 .start-button {
@@ -46,13 +37,21 @@
     active:border-b-white
 }
 
-.solution-card-outer {
-    @apply flex justify-center relative h-fit bg-[#c0c7c8] border-2 border-solid border-b-black border-r-black 
-    border-t-white border-l-white w-5/6 mx-auto
+.window-outer {
+    @apply flex justify-center relative min-h-fit bg-[#c0c7c8] border-2 border-solid border-b-black border-r-black
+    border-t-white border-l-white mx-auto
 }
 
-.solution-card-inner {
-    @apply relative border-2 border-solid border-t-black border-l-black bg-white w-[99%] bottom-1 mt-11 p-1
+.window-inner-with-bar {
+    @apply relative font-win95 border-2 border-solid border-t-black border-l-black bg-white w-[99%] bottom-1 mt-11 p-1
+}
+
+.window-inner-no-bar {
+    @apply relative font-win95 border-2 border-solid border-t-black border-l-black bg-white w-[99%] my-1 p-1
+}
+
+.title-bar {
+    @apply absolute inline-block font-win95bold text-white bg-[#0000a8] w-[99%] h-8 top-1
 }
 
 .custom-button {

@@ -18,7 +18,7 @@ function TitleBar({handleNavbarToggle}) {
                 </button>
 
                 {/* This is the title "taskbar item", going to move this tailwind into index.css */}
-                <div className="m-1 bg-gray-300 relative inline-block border-solid border-2 border-t-black border-l-black border-b-white border-r-white h-[84%] min-w-[240px] w-1/6 p-1">
+                <div className="m-1 bg-gray-200 relative inline-block border-solid border-2 border-t-black border-l-black border-b-white border-r-white h-[84%] min-w-[240px] w-1/6 p-1">
                     <img src={main_logo} alt="windows logo" className="inline-block relative top-0.5 h-6 px-1 float-left"/>
                     <p className="font-win95 relative top-0.5">Tatiana's Code Challenge</p>
                 </div>
