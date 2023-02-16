@@ -25,7 +25,7 @@ function MainSpace() {
   }
 
   const solutionsFilter = solutions.filter(sol => {
-    if(langChange === "") return true;
+    if(langChange === "All") return true;
     return sol.language === langChange;
   })
 
