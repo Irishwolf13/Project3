@@ -15,7 +15,7 @@ function NavigationBar(){
     const [searchToggle, setSearchToggle] = useState(false)
 
     function handleLoggingIn(){
-        setLoggingIn(!loggingIn)
+      setLoggingIn(!loggingIn)
     }
 
     function handleSearchToggle(){
