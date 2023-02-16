@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import Login from "./Login"
 // import User from "./User"
  import SearchMenu from "./SearchMenu"
+ import { NavLink } from "react-router-dom"
  import search_icon from "../assets/search-icon.png"
  import folder_icon from "../assets/folder-icon.png"
  import answer_icon from "../assets/answer-icon.png"
@@ -61,10 +62,16 @@ function NavigationBar(){
                     {loggingIn ? <Login /> : null}
 
                 {/* This is the button for solves */}
-                <button className="navbar-button">
+                <NavLink to="/solutions" className="navbar-button">
                     <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
                     <p className="float-left pl-2">Solves</p>
-                </button>
+                </NavLink>
+
+                {/* This is the button for Tatiana's Question of the Day */}
+                <NavLink to="/" className="navbar-button">
+                    <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
+                    <p className="float-left pl-2">Tatiana</p>
+                </NavLink>
 
                 {/* This is the button for the search menu */}
                 <button onClick={handleSearchToggle} className="navbar-button">
