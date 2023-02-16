@@ -10,18 +10,20 @@ import Login from "./Login"
  import user_icon from "../assets/user-icon.png"
 
 
-function NavigationBar(){
+function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus }){
     const [loggingIn, setLoggingIn] = useState(false)
-    const [searchToggle, setSearchToggle] = useState(false)
 
-    function handleLoggingIn(){
+    function handleLogInClick(){
+      if (logStatus != 'Log In'){
+        alert('You have been logged out.')
+        helperLogStatus('Log In')
+      }
       setLoggingIn(!loggingIn)
     }
 
-    function handleSearchToggle(){
-        setSearchToggle(!searchToggle)
+    const hideLogInWindow = () => {
+      setLoggingIn(!loggingIn)
     }
-
     let user = "Guest"
 
     return (
@@ -53,13 +55,13 @@ function NavigationBar(){
                 </div> */}
 
                 {/* This is the login / logout button */}
-                <button onClick={handleLoggingIn} className="navbar-button">
+                <button onClick={handleLogInClick} className="navbar-button">
                     <img src={login_icon} alt="login icon" className="inline-block h-6 float-left"/>
                     <p className="float-left pl-2">
-                        {loggingIn ? "Log Out" : "Log In"}
+                        {logStatus}
                     </p>
                 </button>
-                    {loggingIn ? <Login /> : null}
+                {loggingIn ? <Login helperLoggingIn={helperLoggingIn} hideLogInWindow={hideLogInWindow}/> : null}
 
                 {/* This is the button for solves */}
                 <NavLink to="/solutions" className="navbar-button">
@@ -78,10 +80,9 @@ function NavigationBar(){
                     <img src={search_icon} alt="search icon" className="inline-block h-6 float-left"/>
                     <p className="float-left pl-2">Search</p>
                 </NavLink>
-                {searchToggle ? <SearchMenu /> : null}
             </div>
         </div>
-    </>   
+    </>
     )
 }
 
