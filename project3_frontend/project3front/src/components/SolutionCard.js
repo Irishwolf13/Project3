@@ -2,16 +2,30 @@ import React, {useState, useEffect} from "react"
 import CommentCard from "./CommentCard"
 import CustomButton from "./CustomButton"
 import like_image from "../assets/like-button.png"
+import SubmitComment from "./SubmitComment"
 
 function SolutionCard({ id, likes, solve, language, comments, problem }) {
     const [myLikes, setLikes]= useState(likes)
+    const [myComments, setMyComments] = useState([])
+     // tried to add comment function here and didn't work
+     useEffect(() => {
+       setMyComments(comments)
+     }, [])
+     
+    console.log(myComments)
+     const addComment = (newComment) => {
+      console.log(newComment)
+        setMyComments([...comments, newComment])
+     }
 
-    let displayComments = comments.map(item =>
+    let displayComments = myComments.map(item =>
       <CommentCard
         key={item.id}
         commentText={item.comment}
       />
     )
+
+
 
     const handleLike = (e) => {
       fetch(`http://localhost:9292/solutions/${id}/likes`, {
@@ -38,6 +52,7 @@ function SolutionCard({ id, likes, solve, language, comments, problem }) {
             </div>
           </div>
           {displayComments}
+          <SubmitComment id={id} addComment={addComment} />
         </div>
       </>
     )

@@ -3,6 +3,7 @@ import ProblemCard from "./ProblemCard"
 import CommentCard from "./CommentCard"
 import SolutionCard from "./SolutionCard"
 import SubmitSolve from './SubmitSolve';
+import SubmitComment from "./SubmitComment";
 
 function MainSpace() {
   const [problem, setProblem] = useState({})
