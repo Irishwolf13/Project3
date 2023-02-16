@@ -8,6 +8,8 @@ import SubmitComment from "./SubmitComment";
 function MainSpace() {
   const [problem, setProblem] = useState({})
   const [solutions, setSolutions] = useState([])
+  const [langChange, setLangChange] = useState("All")
+
   useEffect(() => {
     fetch("http://localhost:9292/problems/1")
     .then(res => res.json())
@@ -17,7 +19,17 @@ function MainSpace() {
   })
   }, [])
 
-  let sortSolutions = solutions.sort((a, b) => b.num_of_likes - a.num_of_likes)
+  // solution language selector functions
+  function handleLangChange(e) {
+    setLangChange(e.target.value)
+  }
+
+  const solutionsFilter = solutions.filter(sol => {
+    if(langChange === "All") return true;
+    return sol.language === langChange;
+  })
+
+  let sortSolutions = solutionsFilter.sort((a, b) => b.num_of_likes - a.num_of_likes)
   let displaySolutions = sortSolutions.map(solution =>
     <SolutionCard
       key={solution.id}
@@ -36,7 +48,7 @@ function MainSpace() {
 
   return(
     <div className="mx-auto w-4/6 mt-6">
-      <ProblemCard />
+      <ProblemCard onLangChange={handleLangChange}/>
       <SubmitSolve problem={ problem } helperRefresh={helperRefresh}/>
       {displaySolutions}
     </div>

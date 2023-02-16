@@ -29,11 +29,15 @@ function SearchMenu() {
 
           {/* language */}
           <div className="language-selector">
+
             <label for="languages">Language</label> <select name="languages" id='languages'>
+             <option value="All">All</option>
               <option value="javascript">JavaScript</option>
               <option value="ruby">Ruby</option>
               <option value="python">Python</option>
               <option value="Java">Java</option>
+              <option value="C++">C++</option>
+              <option value="C#">C#</option>
             </select>
           </div>
 
@@ -47,7 +51,7 @@ function SearchMenu() {
           </div>
         </div>
       </div>
-    </> 
+    </>
  )
 }
 
