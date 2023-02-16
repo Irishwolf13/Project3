@@ -31,10 +31,12 @@ function SubmitSolve( { problem, helperRefresh }){
         <form>
         <label for="languages">Language</label>
         <select name="languages" id='languages'>
-        <option value="javascript">JavaScript</option>
-        <option value="ruby">Ruby</option>
-        <option value="python">Python</option>
-        <option value="Java">Java</option>
+                <option value="javascript">JavaScript</option>
+                <option value="ruby">Ruby</option>
+                <option value="python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
         </select>
             <textarea
                 type="text"
