@@ -48,7 +48,7 @@ function MainSpace() {
 
   return(
     <div className="mx-auto w-4/6 mt-6">
-      <ProblemCard onLangChange={handleLangChange}/>
+      <ProblemCard problem={problem} onLangChange={handleLangChange}/>
       <SubmitSolve problem={ problem } helperRefresh={helperRefresh}/>
       {displaySolutions}
     </div>
