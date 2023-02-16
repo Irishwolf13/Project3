@@ -16,10 +16,25 @@ function SolutionCard({ id, likes, solve, language, comments, problem }) {
     setMyComments([...comments, newComment])
   }
 
+  function onDelete(id) {
+  const deletionFilter = myComments.filter(myComment => myComment.id !== id)
+
+  fetch(`http://localhost:9292/comments/${id}`, {
+     method: "DELETE",
+     headers: {
+      "Content-Type": "application/json"
+     }
+  })
+  .then(res => res.json())
+  .then(setMyComments(deletionFilter))
+  }
+
   let displayComments = myComments.map(item =>
     <CommentCard
       key={item.id}
+      id={item.id}
       commentText={item.comment}
+      onDelete={onDelete}
     />
   )
 
