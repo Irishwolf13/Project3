@@ -34,14 +34,14 @@ function SolutionCard({ id, likes, solve, language, comments, problem }) {
   return (
     <>
       <div className="mx-auto w-4/6">
-        <div className="solution-card-outer">
-          <div className="absolute inline-block bg-[#0000a8] w-[99%] h-8 top-1">
-            <p className="inline-block font-win95bold text-white pl-1">Solution #{id}</p>
+        <div className="window-outer w-5/6">
+          <div className="title-bar">
+            <p className="inline-block pl-2">Solution #{id}</p>
             <div className="relative float-right top-1 right-1">
               <CustomButton buttonImage={like_image} onClick={handleLike}/>
             </div>
           </div>
-          <div className="solution-card-inner">
+          <div className="window-inner-with-bar">
             <p className="font-win95bold">Language: {language}</p>
             <h4 className="font-win95">{solve}</h4>
             <p className="font-win95bold"> This solution has {myLikes} likes</p>
