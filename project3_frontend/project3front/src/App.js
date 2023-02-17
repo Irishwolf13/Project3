@@ -11,6 +11,8 @@ function App() {
   const [navbarToggle, setNavbarToggle] = useState(false)
   const [logStatus, setLogStatus] = useState("Log In")
   const [currentUser, setCurrentUser] = useState({})
+  const [searchProblem, setSearchProblem] = useState({})
+
   console.log(currentUser)
   function handleNavbarToggle() {
     setNavbarToggle(!navbarToggle)
