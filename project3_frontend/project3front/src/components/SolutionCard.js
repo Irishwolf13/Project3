@@ -12,7 +12,7 @@ function SolutionCard({ id, likes, solve, language, comments, problem }) {
 
   useEffect(() => {
     setMyComments(comments)
-  }, [])
+  }, [comments])
 
   const addComment = (newComment) => {
     setMyComments([...comments, newComment])

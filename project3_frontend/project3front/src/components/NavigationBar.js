@@ -10,7 +10,7 @@ import Login from "./Login"
  import user_icon from "../assets/user-icon.png"
 
 
-function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus }){
+function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus, handleNavbarToggle }){
     const [loggingIn, setLoggingIn] = useState(false)
 
     function handleLogInClick(){
@@ -38,7 +38,7 @@ function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus }){
             </div> */}
 
             <div className="inline-block relative top-0 w-10 bg-[#808080] p-1" style={{writingMode: 'vertical-lr'}}>
-                <p className="relative inline-block float-right transform rotate-180 font-bold text-[#c0c7c8] text-xl">(Not)Windows 
+                <p className="relative inline-block float-right transform rotate-180 font-bold text-[#c0c7c8] text-xl">(Not)Windows
                     <p className="relative inline-block text-white text-xl top-1 font-normal">95</p>
                 </p>
             </div>
@@ -64,19 +64,19 @@ function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus }){
                 {loggingIn ? <Login helperLoggingIn={helperLoggingIn} hideLogInWindow={hideLogInWindow}/> : null}
 
                 {/* This is the button for solves */}
-                <NavLink to="/solutions" className="navbar-button">
+                <NavLink to="/solutions" className="navbar-button" onClick={handleNavbarToggle}>
                     <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
                     <p className="float-left pl-2">Solves</p>
                 </NavLink>
 
                 {/* This is the button for Tatiana's Question of the Day */}
-                <NavLink to="/" className="navbar-button">
+                <NavLink to="/" className="navbar-button" onClick={handleNavbarToggle}>
                     <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
-                    <p className="float-left pl-2">Tatiana</p>
+                    <p  className="float-left pl-2">Tatiana</p>
                 </NavLink>
 
                 {/* This is the button for the search menu */}
-                <NavLink to="/search" className="navbar-button">
+                <NavLink to="/search" className="navbar-button" onClick={handleNavbarToggle}>
                     <img src={search_icon} alt="search icon" className="inline-block h-6 float-left"/>
                     <p className="float-left pl-2">Search</p>
                 </NavLink>
