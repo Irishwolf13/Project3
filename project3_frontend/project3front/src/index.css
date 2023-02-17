@@ -14,12 +14,12 @@
 
 #body {
     background-image: url("./assets/tiled.png");
-    background-position: center;
-    background-size: cover;
+    background-position: left;
+    background-size: contain;
 }
 
 .navbar-outer {
-    @apply absolute inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
+    @apply fixed top-12 inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
     border-r-black border-b-black border-l-white border-t-white border-solid border-2
 }
 
@@ -32,14 +32,14 @@
 }
 
 .start-button {
-    @apply relative border-solid border-b-black border-r-black border-l-white border-t-white border-2 
+    @apply absolute inline-block border-solid border-b-black border-r-black border-l-white border-t-white border-2 
     m-1 h-[84%] w-24 hover:bg-gray-300 active:border-t-black active:border-l-black active:border-r-white 
     active:border-b-white
 }
 
 .window-outer {
     @apply flex justify-center relative min-h-fit bg-[#c0c7c8] border-2 border-solid border-b-black border-r-black
-    border-t-white border-l-white mx-auto
+    border-t-white border-l-white mx-auto shadow-lg
 }
 
 .window-inner-with-bar {
@@ -57,5 +57,14 @@
 .custom-button {
     @apply relative border-solid border-b-black border-r-black border-t-white border-l-white border-2 bg-[#c0c7c8] 
     hover:bg-gray-300 active:bg-gray-300 active:border-t-black active:border-l-black active:border-r-white 
-    active:border-b-white h-6 w-6 
+    active:border-b-white h-full w-full 
+}
+
+.comment-button {
+    @apply font-win95 relative inline-block float-right px-2 m-1 bottom-0.5 border-t-white border-l-white border-b-black border-r-black
+    border-solid border-2 active:border-t-black active:border-l-black active:border-b-white active:border-r-white active:bg-gray-200
+}
+
+.comment-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max z-20 shadow-md text-black font-win95 bg-yellow-100 border-black border-2 transition-all duration-100 scale-0 origin-left shadow-lg
 }

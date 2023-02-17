@@ -28,31 +28,35 @@ function SubmitSolve( { problem, helperRefresh }){
  return (
 
 
-  <div className="border-2 border-solid border-black mx-auto w-4/6 bg-slate-300 m-6 h-48">
-    <div>
-        <form>
-        <label for="languages">Language</label>
-        <select name="languages" id='languages'>
-                <option value="javascript">JavaScript</option>
-                <option value="ruby">Ruby</option>
-                <option value="python">Python</option>
-                <option value="Java">Java</option>
-                <option value="C++">C++</option>
-                <option value="C#">C#</option>
-        </select>
+  <div className="window-outer w-5/6 m-8">
+    <div className="title-bar px-2">Submit Your Solution</div>
+        <form className="relative w-full left-1 h-fit">
+          <div className="window-inner-with-bar my-0">
             <textarea
-                type="text"
-                name="solve"
-                placeholder="enter solve"
-                value={solveInput}
-                onChange={handleInput}
+              type="text"
+              name="solve"
+              placeholder="enter solve"
+              value={solveInput}
+              onChange={handleInput}
+              className="w-full h-48"
             />
-            <button
-              type="submit"
-              onClick={handleSubmit}
-            >Submit Solve</button>
+          </div>
+
+          <div className="inline-block">
+            <label for="languages">Language</label>
+            <select name="languages" id='languages' className="">
+              <option value="javascript">JavaScript</option>
+              <option value="ruby">Ruby</option>
+              <option value="python">Python</option>
+              <option value="Java">Java</option>
+              <option value="C++">C++</option>
+              <option value="C#">C#</option>
+            </select>
+          </div>
+            <button type="submit" onClick={handleSubmit} className="comment-button right-1">
+              Submit Solve
+            </button>
         </form>
-    </div>
   </div>
  )
 }
