@@ -65,22 +65,15 @@ function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus, handleNavb
                 {loggingIn ? <Login helperLoggingIn={helperLoggingIn} hideLogInWindow={hideLogInWindow}/> : null}
 
                 {/* This is the button for Tatiana's Question of the Day */}
-                <NavLink to="/" className="navbar-button">
+                <NavLink to="/" className="navbar-button" onClick={handleNavbarToggle}>
                     <img src={home_icon} alt="answer icon" className="inline-block h-6 float-left "/>
-                    <p className="float-left pl-2">Home</p>
+                    <p className="float-left pl-2">Tatiana's Code Challenge</p>
                 </NavLink>
 
                 {/* This is the button for solves */}
                 <NavLink to="/solutions" className="navbar-button" onClick={handleNavbarToggle}>
                     <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
                     <p className="float-left pl-2">Solves</p>
-                </NavLink>
-
-
-                {/* This is the button for Tatiana's Question of the Day */}
-                <NavLink to="/" className="navbar-button" onClick={handleNavbarToggle}>
-                    <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
-                    <p  className="float-left pl-2">Tatiana</p>
                 </NavLink>
 
                 {/* This is the button for the search menu */}

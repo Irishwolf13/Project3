@@ -9,6 +9,7 @@ function MainSpace({problem_ID}) {
   const [problem, setProblem] = useState({})
   const [solutions, setSolutions] = useState([])
   const [langChange, setLangChange] = useState("All")
+
   useEffect(() => {
     fetch(`http://localhost:9292/problems/${problem_ID}`)
     .then(res => res.json())

@@ -20,11 +20,11 @@ function ProblemCard({onLangChange, problem}) {
                 </div>
                 <div className="relative inline-block font-win95 border-t-black border-l-black border-b-white border-r-white border-2 border-solid px-1 bottom-0.5 my-0.5 bg-gray-300">
                     <label for="solution-language">Problem Language: </label> 
-                    <select name="solution-language" id="solution-language" onChange={onLangChange} className="">
+                    <select name="solution-language" id="solution-language" onChange={onLangChange}>
                         <option value="All">All</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="ruby">Ruby</option>
-                        <option value="python">Python</option>
+                        <option value="Javascript">JavaScript</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Python">Python</option>
                         <option value="Java">Java</option>
                         <option value="C++">C++</option>
                         <option value="C#">C#</option>
