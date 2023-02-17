@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import search_icon from "../assets/search-icon.png"
@@ -6,6 +6,29 @@ import search_icon from "../assets/search-icon.png"
 
 function SearchMenu() {
     const [startDate, setStartDate] = useState(new Date());
+    const [myProblems, setMyProblems] = useState([])
+    const [myDifficulty, setMyDifficulty] = useState("easy")
+
+    // console.log(myProblems.filter(item => item.difficulty == "easy").filter(item => item.date == 1))
+    // console.log("myDate" + startDate.getDate())
+
+    useEffect(() => {
+      fetch(`http://localhost:9292/problems`)
+      .then(res => res.json())
+      .then(problemData => {
+        setMyProblems(problemData)
+    })
+    }, [])
+
+    const handleButtonClick = () => {
+      let currentDate = startDate.getDate()
+      let currentDifficulty = myDifficulty
+      console.log(currentDate)
+      console.log(currentDifficulty)
+      let filterByDif = myProblems.filter(problem => problem.difficulty == currentDifficulty)
+      let filterByDate = filterByDif.filter(problem => problem.date == currentDate)
+      console.log(filterByDate)
+    }
  return (
     <>
       <div className="flex justify-center">
@@ -29,7 +52,7 @@ function SearchMenu() {
             </div>
 
             {/* language */}
-            <div className="language-selector">
+            {/* <div className="language-selector">
 
               <label for="languages">Language</label> <select name="languages" id='languages'>
                 <option value="All">All</option>
@@ -40,15 +63,16 @@ function SearchMenu() {
                 <option value="C++">C++</option>
                 <option value="C#">C#</option>
               </select>
-            </div>
+            </div> */}
 
             {/* difficulty */}
             <div className="difficulty-selector">
-              <label for="difficulty-level">Difficulty</label> <select name="difficulty-level" id="difficulty-level">
+              <label for="difficulty-level">Difficulty</label> <select onChange={(e) => setMyDifficulty(e.target.value)} name="difficulty-level" id="difficulty-level">
                 <option value="easy">Easy</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
+                <option value="medium">Intermediate</option>
+                <option value="hard">Advanced</option>
               </select>
+              <button onClick={handleButtonClick}>John's Super Awesome Button!</button>
             </div>
           </div>
         </div>

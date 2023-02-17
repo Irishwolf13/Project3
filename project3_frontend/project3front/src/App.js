@@ -32,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainSpace/>}/>
         <Route path="/solutions" element={<SolutionsSpace currentUser={currentUser}/>}/>
-        <Route path="/search" element={<SearchMenu></SearchMenu>}/>
+        <Route path="/search" element={<SearchMenu/>}/>
       </Routes>
     </div>
   );
