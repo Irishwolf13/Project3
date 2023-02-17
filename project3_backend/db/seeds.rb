@@ -44,21 +44,21 @@ Problem.create(
     Problem.create(
       question: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
       difficulty: "easy",
-      date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+      date: rand(1..31)
     )
   end
   20.times do
     Problem.create(
       question: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
       difficulty: "medium",
-      date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+      date: rand(1..31)
     )
   end
   20.times do
     Problem.create(
       question: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
       difficulty: "hard",
-      date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+      date: rand(1..31)
     )
   end
 puts "Seeding Solutions"
