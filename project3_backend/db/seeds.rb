@@ -12,7 +12,34 @@ puts "Seeding Users"
   User.create(user_name: "Clyde", password: "gpsking")
   User.create(user_name: "Yeeun", password: "realrachel")
 
-puts "Sedding Problems"
+puts "Seeding Problems"
+Problem.create(
+  question: "Return the sum of two numbers",
+  difficulty: "easy",
+  date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+)
+Problem.create(
+  question: "Return the total sum of an array of numbers",
+  difficulty: "easy",
+  date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+)
+Problem.create(
+  question: "Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false" ,
+  difficulty: "easy",
+  date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+)
+Problem.create(
+  question: "Define a function betweenLogs(lowNum, highNum) that will print every number from lowNum to HighNum, inclusive. Inclusive means that the range includes lowNum and highNum.",
+  difficulty: "medium",
+  date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+)
+Problem.create(
+  question: 'Write a function, countVowels(word), that takes in a string word and returns the number of vowels in the word.
+  Vowels are the letters "a", "e", "i", "o", "u".',
+  difficulty: "hard",
+  date: Faker::Date.between(from: '2023-01-01', to: '2023-02-14')
+)
+
   20.times do
     Problem.create(
       question: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),

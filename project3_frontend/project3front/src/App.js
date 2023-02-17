@@ -28,9 +28,9 @@ function App() {
   return (
     <div className='h-screen'>
       <TitleBar handleNavbarToggle={handleNavbarToggle}/>
-      {navbarToggle ? <NavigationBar logStatus={logStatus} helperLoggingIn={helperLoggingIn} helperLogStatus={helperLogStatus}/> : null}
+      {navbarToggle ? <NavigationBar logStatus={logStatus} helperLoggingIn={helperLoggingIn} helperLogStatus={helperLogStatus} handleNavbarToggle={handleNavbarToggle}/> : null}
       <Routes>
-        <Route path="/" element={<MainSpace/>}/>
+        <Route path="/" element={<MainSpace/>} />
         <Route path="/solutions" element={<SolutionsSpace currentUser={currentUser}/>}/>
         <Route path="/search" element={<SearchMenu></SearchMenu>}/>
       </Routes>
