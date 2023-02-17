@@ -39,7 +39,7 @@ function SearchMenu({helperSetSearch}) {
     <>
       <div className="flex justify-center mt-16">
         {/* This is the outer div of the search menu, tailwind styles for it are stored in index.css */}
-        <div className="window-outer w-1/6 mt-6">
+        <div className="window-outer w-56 mt-6">
 
           {/* This is the blue bar with title and icon for the search menu */}
           <div className="title-bar">
@@ -47,38 +47,42 @@ function SearchMenu({helperSetSearch}) {
             <h1 className="inline-block pl-2">Search Menu</h1>
           </div>
 
-          {/* This is the inner div of the search menu, tailwind styles for it are stored in index.css*/}
-          <div className="window-inner-with-bar">
-            {/* Calendar */}
-            <div className="calendar">
-              <p className="inline-block pr-1">Date:</p>
-              <div className="inline-block">
-                <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+            {/* This is the inner div of the search menu, tailwind styles for it are stored in index.css*/}
+            <div className="relative w-full h-fit left-0.5">
+              <div className="window-inner-with-bar">
+              {/* Calendar */}
+              <div className="border-2 border-dashed border-black w-full p-1 my-1">
+                <p className="inline-block pr-1">Date: </p>
+                <div className="inline-block">
+                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                </div>
               </div>
-            </div>
 
-            {/* language */}
-            {/* <div className="language-selector">
+              {/* language */}
+              {/* <div className="language-selector">
 
-              <label for="languages">Language</label> <select name="languages" id='languages'>
-                <option value="All">All</option>
-                <option value="javascript">JavaScript</option>
-                <option value="ruby">Ruby</option>
-                <option value="python">Python</option>
-                <option value="Java">Java</option>
-                <option value="C++">C++</option>
-                <option value="C#">C#</option>
-              </select>
-            </div> */}
+                <label for="languages">Language</label> <select name="languages" id='languages'>
+                  <option value="All">All</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="ruby">Ruby</option>
+                  <option value="python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="C++">C++</option>
+                  <option value="C#">C#</option>
+                </select>
+              </div> */}
 
-            {/* difficulty */}
-            <div className="difficulty-selector">
-              <label for="difficulty-level">Difficulty</label> <select onChange={(e) => setMyDifficulty(e.target.value)} name="difficulty-level" id="difficulty-level">
-                <option value="easy">Easy</option>
-                <option value="medium">Intermediate</option>
-                <option value="hard">Advanced</option>
-              </select>
-              <NavLink to="/" onClick={handleButtonClick}>John's Super Awesome Button!</NavLink>
+              {/* difficulty */}
+              <div className="border-2 border-black border-dashed w- p-1 my-1">
+                <label for="difficulty-level">Difficulty: </label> <select onChange={(e) => setMyDifficulty(e.target.value)} name="difficulty-level" id="difficulty-level">
+                  <option value="easy">Easy</option>
+                  <option value="medium">Intermediate</option>
+                  <option value="hard">Advanced</option>
+                </select>
+              </div>
+              <div className="relative top-1.5 left-2">
+                <NavLink to="/" onClick={handleButtonClick} className="comment-button">Search</NavLink>
+              </div>
             </div>
           </div>
         </div>
