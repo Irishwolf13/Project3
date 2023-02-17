@@ -5,20 +5,19 @@ import SolutionCard from "./SolutionCard"
 import SubmitSolve from './SubmitSolve';
 import SubmitComment from "./SubmitComment";
 
-function MainSpace() {
+function MainSpace({problem_ID}) {
   const [problem, setProblem] = useState({})
   const [solutions, setSolutions] = useState([])
   const [langChange, setLangChange] = useState("All")
 
   useEffect(() => {
-    fetch(`http://localhost:9292/problems/2`)
+    fetch(`http://localhost:9292/problems/${problem_ID}`)
     .then(res => res.json())
     .then(problemData => {
       setProblem(problemData)
       setSolutions(problemData.solutions)
   })
   }, [])
-
   // solution language selector functions
   function handleLangChange(e) {
     setLangChange(e.target.value)

@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { NavLink } from "react-router-dom"
 import search_icon from "../assets/search-icon.png"
+import MainSpace from './MainSpace';
 
 
-function SearchMenu() {
+function SearchMenu({helperSetSearch}) {
     const [startDate, setStartDate] = useState(new Date());
     const [myProblems, setMyProblems] = useState([])
     const [myDifficulty, setMyDifficulty] = useState("easy")
@@ -23,11 +25,15 @@ function SearchMenu() {
     const handleButtonClick = () => {
       let currentDate = startDate.getDate()
       let currentDifficulty = myDifficulty
-      console.log(currentDate)
-      console.log(currentDifficulty)
+      // console.log(currentDate)
+      // console.log(currentDifficulty)
       let filterByDif = myProblems.filter(problem => problem.difficulty == currentDifficulty)
       let filterByDate = filterByDif.filter(problem => problem.date == currentDate)
-      console.log(filterByDate)
+      if (filterByDate.length > 0) {
+        helperSetSearch(filterByDate[0].id)
+      }else{
+        helperSetSearch(1)
+      }
     }
  return (
     <>
@@ -72,7 +78,7 @@ function SearchMenu() {
                 <option value="medium">Intermediate</option>
                 <option value="hard">Advanced</option>
               </select>
-              <button onClick={handleButtonClick}>John's Super Awesome Button!</button>
+              <NavLink to="/" onClick={handleButtonClick}>John's Super Awesome Button!</NavLink>
             </div>
           </div>
         </div>
