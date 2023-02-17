@@ -1,6 +1,7 @@
 import React from "react"
 import CustomButton from "./CustomButton"
 import delete_icon from "../assets/delete-icon.png"
+import commenter_icon from "../assets/commenter-icon.png"
 
 function CommentCard({ commentText, onDelete, id }) {
 
@@ -12,6 +13,7 @@ function CommentCard({ commentText, onDelete, id }) {
     <div className="relative right-10">
       <div className="window-outer w-4/6 my-2">
         <div className="title-bar">
+          <img src={commenter_icon} alt="navbar icon" className="inline-block px-1 h-5"/>
           <h1 className="inline-block pl-2">Comment by: </h1>
           <div className="relative inline-block float-right h-6 w-6 top-1 right-1 group">
             <CustomButton buttonImage={delete_icon} clickEvent={handleDelete}/>
@@ -19,7 +21,7 @@ function CommentCard({ commentText, onDelete, id }) {
           </div>  
         </div>
         <div className="window-inner-with-bar">
-          <p>
+          <p className="whitespace-pre-wrap break-words">
             {commentText}
           </p>
         </div>

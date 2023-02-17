@@ -19,7 +19,7 @@
 }
 
 .navbar-outer {
-    @apply fixed top-12 inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
+    @apply fixed top-12 inline-flex justify-center z-10 h-[30%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
     border-r-black border-b-black border-l-white border-t-white border-solid border-2
 }
 
@@ -61,8 +61,8 @@
 }
 
 .comment-button {
-    @apply font-win95 relative inline-block float-right px-2 m-1 bottom-0.5 border-t-white border-l-white border-b-black border-r-black
-    border-solid border-2 active:border-t-black active:border-l-black active:border-b-white active:border-r-white active:bg-gray-200
+    @apply font-win95 relative bg-[#c0c7c8] inline-block float-right px-2 m-1 bottom-0.5 border-t-white border-l-white border-b-black border-r-black
+    border-solid border-2 active:border-t-black active:border-l-black active:border-b-white active:border-r-white active:bg-gray-200 hover:bg-gray-300
 }
 
 .comment-tooltip {
