@@ -4,6 +4,7 @@ import CustomButton from "./CustomButton"
 import SubmitComment from "./SubmitComment"
 import comment_image from "../assets/comment-icon.png"
 import like_image from "../assets/like-button.png"
+import solution_image from "../assets/solution-icon.png"
 
 function SolutionCard({ id, likes, solve, language, comments, problem }) {
   const [myLikes, setLikes]= useState(likes)
@@ -54,9 +55,10 @@ function SolutionCard({ id, likes, solve, language, comments, problem }) {
 
   return (
     <>
-      <div className="mx-auto w-5/6">
+      <div className="mx-auto w-5/6 m-2">
         <div className="window-outer w-5/6">
           <div className="title-bar">
+            <img src={solution_image} alt="navbar icon" className="inline-block px-1 h-5"/>
             <p className="inline-block pl-2">Solution #{id}</p>
             <div className="relative float-right top-1 right-1">
               <p className="inline-block pr-2 font-win95bold">{myLikes} likes</p>

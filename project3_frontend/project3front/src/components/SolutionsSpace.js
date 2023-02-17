@@ -16,7 +16,7 @@ function SolutionsSpace({currentUser}) {
 
 
   return(
-    <div className="mx-auto w-4/6 mt-6">
+    <div className="mx-auto w-4/6 mt-20">
       {displayInformation}
     </div>
   )

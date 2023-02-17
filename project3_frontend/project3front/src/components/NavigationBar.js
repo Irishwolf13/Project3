@@ -8,6 +8,7 @@ import Login from "./Login"
  import answer_icon from "../assets/answer-icon.png"
  import login_icon from "../assets/login-icon.png"
  import user_icon from "../assets/user-icon.png"
+ import home_icon from "../assets/home-icon.png"
 
 
 function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus, handleNavbarToggle }){
@@ -63,11 +64,18 @@ function NavigationBar({ logStatus, helperLoggingIn, helperLogStatus, handleNavb
                 </button>
                 {loggingIn ? <Login helperLoggingIn={helperLoggingIn} hideLogInWindow={hideLogInWindow}/> : null}
 
+                {/* This is the button for Tatiana's Question of the Day */}
+                <NavLink to="/" className="navbar-button">
+                    <img src={home_icon} alt="answer icon" className="inline-block h-6 float-left "/>
+                    <p className="float-left pl-2">Home</p>
+                </NavLink>
+
                 {/* This is the button for solves */}
                 <NavLink to="/solutions" className="navbar-button" onClick={handleNavbarToggle}>
                     <img src={answer_icon} alt="answer icon" className="inline-block h-6 float-left "/>
                     <p className="float-left pl-2">Solves</p>
                 </NavLink>
+
 
                 {/* This is the button for Tatiana's Question of the Day */}
                 <NavLink to="/" className="navbar-button" onClick={handleNavbarToggle}>
