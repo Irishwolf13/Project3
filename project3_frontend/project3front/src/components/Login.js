@@ -37,11 +37,19 @@ function Login({helperLoggingIn, hideLogInWindow}){
   }
   return (
     <form onSubmit={handleLoginClicked}>
-           {/* <label htmlFor="login" value="Username">Username:   </label><br/> */}
-           <input onChange={handleInputName} type="text" placeholder="enter username..." name="login"  autoFocus={true}/>
-           {/* <label htmlFor="login" value="Password">Password:   </label><br/> */}
-           <input onChange={handleInputPass} type="password" placeholder="enter password..."name="password" autoFocus={true}/>
-           <button type="submit" >login</button>
+      <div className="border-solid border-t-black border-l-black border-b-white border-r-white border-2 max-w-max bg-gray-200 mx-1 p-1 h-28">
+        {/* <label htmlFor="login" value="Username">Username:   </label><br/> */}
+        <div className="border-2 border-solid border-gray-500 max-w-max bg-white m-1 pl-1">
+          <input onChange={handleInputName} type="text" placeholder="Enter Username..." name="login"  autoFocus={true}/>
+        </div>
+
+        {/* <label htmlFor="login" value="Password">Password:   </label><br/> */}
+        <div className="border-2 border-solid border-gray-500 max-w-max bg-white m-1 pl-1">
+          <input onChange={handleInputPass} type="password" placeholder="Enter Password..."name="password" autoFocus={true}/>          
+        </div>
+
+        <button type="submit" className="comment-button right-12">Log In</button>
+      </div>
     </form>
   )
 }

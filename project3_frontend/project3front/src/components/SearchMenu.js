@@ -8,9 +8,9 @@ function SearchMenu() {
     const [startDate, setStartDate] = useState(new Date());
  return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-16">
         {/* This is the outer div of the search menu, tailwind styles for it are stored in index.css */}
-        <div className="window-outer w-3/6 mt-6">
+        <div className="window-outer w-1/6 mt-6">
 
           {/* This is the blue bar with title and icon for the search menu */}
           <div className="title-bar">
