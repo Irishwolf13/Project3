@@ -3,18 +3,12 @@ import NavigationBar from './NavigationBar'
 import windows_logo from "../assets/windows-logo.png"
 import main_logo from "../assets/main-logo.png"
 
-function TitleBar() {
-    const [navbarToggle, setNavbarToggle] = useState(false)
-
-    function handleNavbarToggle() {
-      setNavbarToggle(!navbarToggle)
-    }
+function TitleBar({ handleNavbarToggle }) {
 
     return (
         <>
             {/* This is the actual gray "taskbar" spanning the width of the page, it holds the start menu and title item */}
             <div className="fixed w-full flex z-20 top-0 bg-[#c0c7c8] h-12 border-solid border-b-black border-b-2 shadow-inner">
-                {navbarToggle ? <NavigationBar/> : null}
 
                 {/* This is the start button tailwind/code, also stored in the index.css file */}
                 <button className="start-button" onClick={handleNavbarToggle}>

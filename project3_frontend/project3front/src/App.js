@@ -7,10 +7,16 @@ import TitleBar from './components/TitleBar';
 import MainSpace from './components/MainSpace';
 import SearchMenu from './components/SearchMenu';
 function App() {
+  const [navbarToggle, setNavbarToggle] = useState(false)
+
+  function handleNavbarToggle() {
+    setNavbarToggle(!navbarToggle)
+  }
 
   return (
     <div className='h-screen'>
-      <TitleBar/>
+      {navbarToggle ? <NavigationBar/> : null}
+      <TitleBar handleNavbarToggle={handleNavbarToggle}/>
       <Routes>
         <Route path="/" element={<MainSpace/>}/>
         <Route path="/solutions" element={<h1>Put Solutions here</h1>}/>

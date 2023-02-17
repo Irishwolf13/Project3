@@ -19,7 +19,7 @@
 }
 
 .navbar-outer {
-    @apply relative top-12 inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
+    @apply fixed top-12 inline-flex justify-center z-0 h-[25%] w-1/5 bg-[#c0c7c8] min-w-[288px] min-h-[199px]
     border-r-black border-b-black border-l-white border-t-white border-solid border-2
 }
 
