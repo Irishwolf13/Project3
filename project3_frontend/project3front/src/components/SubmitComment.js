@@ -27,11 +27,14 @@ function SubmitComment({id, addComment}) {
         setComment("")
     }
     return (
-        <div>
-           <form onSubmit={handleSubmit}>
-           <input type="text" name="comment" placeholder="enter comment..." value={newComment} onChange={handleNewComment}/>
-            <button type="submit">Leave Comment</button>
-           </form>
+        <div className="window-outer w-4/6 m-6">
+            <form onSubmit={handleSubmit} className="relative w-full left-0.5">
+                <div className="window-inner-no-bar my-0 h-24">
+                    <textarea placeholder="Enter comment..." value={newComment} onChange={handleNewComment}
+                    className="w-full h-full break-words"/>
+                </div>
+                <button type="submit" className="comment-button">Leave Comment</button>
+            </form>
         </div>
     )
 }
