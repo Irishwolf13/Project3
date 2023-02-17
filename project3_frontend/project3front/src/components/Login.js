@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-function Login(){
+function Login({helperLoggingIn, hideLogInWindow}){
   const [userName, setUserName] = useState("")
   const [userPass, setUserPass] = useState("")
   const [myUsers, setMyUsers] = useState([])
@@ -19,12 +19,13 @@ function Login(){
     let currentUser = myUsers.find(user => user.user_name == userName)
     if (currentUser) {
       if (currentUser.password == userPass){
-        console.log(currentUser)
+        helperLoggingIn(currentUser)
+        hideLogInWindow()
       }else{
-        alert('wrong password')
+        alert('Wrong Password')
       }
     }else {
-      alert('no user')
+      alert('No user with that Username')
     }
   }
 
