@@ -14,7 +14,7 @@ function CommentCard({ commentText, onDelete, id }) {
       <div className="window-outer w-4/6 my-2">
         <div className="title-bar">
           <img src={commenter_icon} alt="navbar icon" className="inline-block px-1 h-5"/>
-          <h1 className="inline-block pl-2">Comment by: </h1>
+          <h1 className="inline-block pl-2">Anonymous Comment</h1>
           <div className="relative inline-block float-right h-6 w-6 top-1 right-1 group">
             <CustomButton buttonImage={delete_icon} clickEvent={handleDelete}/>
             <span className="comment-tooltip group-hover:scale-100">Delete comment</span>
