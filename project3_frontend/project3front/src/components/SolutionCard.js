@@ -68,7 +68,7 @@ function SolutionCard({ id, likes, solve, language, comments, problem }) {
           </div>
           <div className="window-inner-with-bar">
             <p className="font-win95bold">Language: {language}</p>
-            <h4 className="font-win95">{solve}</h4>
+            <h4 className="font-win95 whitespace-pre-wrap break-words">{solve}</h4>
           </div>
         </div>
         <div className="relative inline-block -mr-12  h-12 w-12 float-left left-[92%] bottom-12 group">
